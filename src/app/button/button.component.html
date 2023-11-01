@@ -1,0 +1,9 @@
+<button (click)="onClickHandler()" [disabled]="disabled" [ngClass]="{outline: type === 'outlined', link: type === 'link'}">
+  <ng-container *ngIf="leftIconPath">
+    <svg-icon [src]="leftIconPath" [svgStyle]="{'fill': 'currentColor'}" ></svg-icon>
+  </ng-container>
+  <span>{{text}}</span>
+  <ng-container *ngIf="rightIconPath">
+    <svg-icon [src]="rightIconPath" [svgStyle]="{'fill': 'currentColor'}"></svg-icon>
+  </ng-container>
+</button>

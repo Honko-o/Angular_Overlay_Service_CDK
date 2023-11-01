@@ -1,0 +1,57 @@
+@use 'src/styles/variables' as *;
+
+button {
+  padding: 12px 16px;
+  border-radius: 8px;
+  background-color: #0083F9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  transition: ease-out 300ms;
+  line-height: 24px;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #0073DA;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: #ECEDF1;
+    color: #8D96AB;
+  }
+
+  &.outline {
+    background-color: #fff;
+    outline: 1px solid #0083F9;
+    color: #0083F9;
+    &:hover {
+      background-color: rgba(0, 131, 249, 0.05);
+    }
+    &:disabled {
+      outline: 1px solid #ECEDF1;
+      color: #D8DCE3;
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+
+  &.link {
+    background-color: #fff;
+    color: #0083F9;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:disabled {
+      color: #D8DCE3;
+      text-decoration: none;
+    }
+  }
+}
+
+
